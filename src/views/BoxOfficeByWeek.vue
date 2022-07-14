@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Daily Box Office</h1>
+    <h1>Weekly Box Office</h1>
     <div>
       <input type="date" v-model="selectedDate">
       <button @click="search">Search</button>
@@ -41,9 +41,10 @@ export default {
       const targetDt = this.selectedDate.replaceAll('-', '');
       this.getData(targetDt);
     },
-    async getData(targetDt) {
-      const data = await this.getBoxOfficeByDay(targetDt);
-      this.list = data.boxOfficeResult.dailyBoxOfficeList;
+    async getData(weekGb) {
+      const data = await this.getBoxOfficeByWeek(weekGb);
+      this.list = data.boxOfficeResult.weeklyBoxOfficeList;
+      console.log(data);
     }
   },
   created() {
