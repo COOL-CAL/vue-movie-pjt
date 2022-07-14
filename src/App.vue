@@ -1,22 +1,22 @@
 <template>
   <div>
-    <Header> </Header>
-    <router-view> </router-view>
-    <Footer> </Footer>
-  </div>
+    <Header />
+    <router-view/>
+    <Footer />
+  </div>  
 </template>
-
 <script>
-    import Header from './components/Header';
-    import Footer from './components/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
-    export default {
-      components: {
-        Header,
-        Footer
-      }
-    }
+export default {
+  components: {
+    Header,
+    Footer
+  }
+}
 </script>
+
 
 <style>
 #app {
@@ -38,5 +38,16 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+}
+table {
+  margin-left:auto; 
+  margin-right:auto;
+  border: 1px solid rgb(70, 70, 70);
+  border-collapse: collapse;
+  margin-bottom: 30px;
+}
+td, th {
+  border: 1px solid rgb(70, 70, 70);
+  padding: 10px;
 }
 </style>

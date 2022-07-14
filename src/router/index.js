@@ -1,18 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home'; 
+import Home from '../views/Home';
 import BoxOfficeByDay from '../views/BoxOfficeByDay';
-
 const routes = [
   {
     path: '/',
     name: 'name',
-    components: Home
+    component: Home
   },
   {
     path: '/boxOfficeByDay',
     name: 'boxOfficeByDay',
-    components: BoxOfficeByDay
-  },
+    component: BoxOfficeByDay
+  }
 ]
 
 const router = createRouter({
